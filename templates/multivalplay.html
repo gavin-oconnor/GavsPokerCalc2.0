@@ -14,6 +14,8 @@
     <p>{{ player.name }} - {{ player.chip_string }} - (${{ "{:.2f}".format(player.buy_in) }})</p>
 {% endfor %}
 
+<p>If you inputted something wrong just put the same name again with the correct amount of chips</p>
+
 <form method="POST">
     <label for="name">Name: </label>
     <input type="text" id="name" name="name">

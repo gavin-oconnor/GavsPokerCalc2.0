@@ -123,14 +123,20 @@ def usecash():
 
 @app.route('/play/<code>', methods=["GET","POST"])
 def play(code):
+    print("THIS IS RUNNING")
     curr_game = Game.query.filter_by(code=code).first()
+    print(curr_game.mode)
     if curr_game.mode == "cash":
         if request.method == "POST":
             name = request.form['name']
             if name is not None:
+                is_a_player = Player.query.filter_by(code=code,name=name).first()
                 money = request.form['value']
-                new_player = Player(name, code, money)
-                db.session.add(new_player)
+                if is_a_player is not None:
+                    is_a_player.buy_in = money
+                else:
+                    new_player = Player(name, code, money)
+                    db.session.add(new_player)
                 db.session.commit()
         players = Player.query.filter_by(code=code).all()
         return render_template("cashplay.html",players=players,code=code)
@@ -139,22 +145,25 @@ def play(code):
         if request.method == "POST":
             cs = ""
             name = request.form['name']
+            is_a_player = Player.query.filter_by(code=code,name=name).first()
             money = 0
             if name is not None:
                 for chip in chips:
                     money += int(request.form[f"{chip.color}"]) * chip.value
                     cs += str(request.form[f"{chip.color}"]) + "-"
-                new_player = Player(name, code, money, cs)
-                db.session.add(new_player)
+                if is_a_player is not None:
+                    is_a_player.buy_in = money
+                    is_a_player.chip_string = cs
+                else:
+                    new_player = Player(name, code, money, cs)
+                    db.session.add(new_player)
                 db.session.commit()
         players = Player.query.filter_by(code=code).all()
         for player in players:
             temp = ""
             f = player.chip_string.split("-")
             for index, chip in enumerate(chips):
-                print(f[index])
                 if f[index] == "1":
-                    print("YES")
                     temp += f"{f[index]} {chip.color} Chip - "
                 else:
                     temp += f"{f[index]} {chip.color} Chips - "
@@ -162,14 +171,21 @@ def play(code):
         chips = Chip.query.filter_by(code=code).all()
         return render_template("multivalplay.html",chips=chips, players=players, code=code)
     else:
+        print("RUN")
         chip_val = Chip.query.filter_by(code=code).first().value
         if request.method == "POST":
             name = request.form['name']
             if name is not None:
                 chips = int(request.form['value'])
                 money = chips * chip_val
-                new_player = Player(name, code, money)
-                db.session.add(new_player)
+                print(name)
+                is_a_player = Player.query.filter_by(code=code,name=name).first()
+                if is_a_player is not None:
+                    print(is_a_player.name)
+                    is_a_player.buy_in = money
+                else:
+                    new_player = Player(name, code, money)
+                    db.session.add(new_player)
                 db.session.commit()
         players = Player.query.filter_by(code=code).all()
         for player in players:

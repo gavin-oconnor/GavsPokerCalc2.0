@@ -10,6 +10,8 @@
 <div class="body">
 <p class="question">Who's Playing?</p>
 
+
+<p>If you inputted something wrong just put the same name again with the correct amount of money</p>
 {% for player in players %}
     <p>{{ player.name }} - ${{ "{:.2f}".format(player.buy_in) }}</p>
 {% endfor %}
@@ -29,4 +31,5 @@
 </a>
 
 </div>
+
 
