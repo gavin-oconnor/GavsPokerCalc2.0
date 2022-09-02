@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='newgame.css') }}">
+</head>
+
+<div class="home-header">
+<h1 class="home-title">Gav's Poker Payout Calculator 2.0</h1>
+<p>You've already lost your college tuition, at least let us do the math for you</p>
+</div>
+
+<div class="body">
+<p class="question">What is each chip worth?</p>
+
+{% for chip in chips %}
+<p>{{ chip.color }} - ${{ "{:.2f}".format(chip.value) }}</p>
+<p></p>
+{% endfor %}
+
+<form method="POST">
+    <label for="color">Color: </label>
+    <input type="text" id="color" name="color">
+    <label for="value">$</label>
+    <input type="number" min="0.01" step="0.01" id="value" name="value">
+    <input type="submit" value="Add Color">
+</form>
+
+<a href="/play/{{code}}">
+    <button>Start Game</button>
+</a>
+
+<p>{{error}}</p>
+
+</div>

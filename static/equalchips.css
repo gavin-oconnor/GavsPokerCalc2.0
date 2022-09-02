@@ -1,0 +1,15 @@
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.home-header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: auto;
+}

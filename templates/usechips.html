@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='play.css') }}">
+</head>
+
+<div class="home-header">
+    <h1 class="home-title">Gav's Poker Payout Calculator 2.0</h1>
+    <p>You've already lost your college tuition, at least let us do the math for you</p>
+</div>
+
+<div class="body">
+<p class="question">What is a chip worth?</p>
+
+<form method="POST">
+    <label for="value">$</label>
+    <input type="number" min="0.01" step="0.01" id="value" name="value">
+    <br>
+    <input class="submit-button" type="submit" value="Start Game">
+</form>
+
+<br>
+<p>{{error}}</p>
+
+</div>

@@ -1,0 +1,90 @@
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.home-header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: auto;
+}
+
+.question {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.body {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    border: none;
+    padding: 16px 70px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(27, 165, 61);
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: rgb(1,115,82);
+}
+
+form {
+    padding-top: 15px;
+}
+
+input[type = "submit"] {
+    margin-left: 10px;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(38, 124, 194);
+    font-size: 16px;
+}
+
+input[type = "submit"]:hover {
+    background-color: rgb(27, 82, 127);
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttons {
+    width:70%;
+    margin: auto;
+    text-align: center;
+}
+
+.button-1 {
+    background-color: rgb(38, 124, 194);
+    margin-right: 10px;
+}
+
+.button-1:hover {
+    background-color: rgb(27, 82, 127)
+}
+
+.button-2 {
+    background-color: rgb(183, 36, 36);
+    margin-left: 10px;
+}
+
+.button-2:hover {
+    background-color: rgb(135, 26, 26);
+}
+

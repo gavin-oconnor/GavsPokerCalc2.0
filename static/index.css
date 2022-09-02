@@ -1,0 +1,55 @@
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.home-header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: auto;
+}
+
+button {
+    border: none;
+    padding: 24px 82px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(27, 165, 61);
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: rgb(1,115,82);
+}
+
+.button {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.body {
+    padding-top: 30px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.footer {
+    position: fixed;  
+    left: 10px;  
+    bottom: 5px;  
+    right: 10px;   
+    width: 95%;  
+    text-align: center;
+    color:rgb(147, 147, 147)
+}

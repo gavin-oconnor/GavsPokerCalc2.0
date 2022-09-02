@@ -1,0 +1,61 @@
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.home-header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: auto;
+}
+
+.body {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+input[type = "submit"] {
+    margin-top: 10px;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(27, 165, 61);
+    font-size: 16px;
+}
+
+input[type = "submit"]:hover {
+    background-color: rgb(1,115,82);
+}
+
+input[type = "text"], input[type = "number"] {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 12px;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(185, 50, 48);
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: rgb(136, 37, 35);
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.question {
+    font-size: 20px;
+}

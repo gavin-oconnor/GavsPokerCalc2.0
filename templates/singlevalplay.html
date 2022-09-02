@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='play.css') }}">
+</head>
+
+<div class="home-header">
+    <h1 class="home-title">Gav's Poker Payout Calculator 2.0</h1>
+    <p>You've already lost your college tuition, at least let us do the math for you</p>
+</div>
+
+<div class="body">
+    <p class="question">Who's Playing?</p>
+{% for player in players %}
+    <p>{{ player.name }} - {{ player.buy_in }} Chips</p>
+{% endfor %}
+
+<form method="POST">
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name">
+    <input type="text" id="value" name="value">
+    <label for="value">Chips</label>
+    <input type="submit" value="Add Player">
+</form>
+
+<a href="/finishchipgame/{{code}}">
+    <button>Finish Game</button>
+</a>
+
+</div>

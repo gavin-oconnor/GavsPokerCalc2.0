@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='finish.css') }}">
+</head>
+
+<div class="home-header">
+<h1 class="home-title">Gav's Poker Payout Calculator 2.0</h1>
+<p>You've already lost your college tuition, at least let us do the math for you</p>
+</div>
+
+<div class="body">
+    <p class="question">Time to Pay Up!</p>
+    <p class="question">How many chips did everyone end with?</p>
+
+
+<form method="POST">
+{% for player in players %}
+<p>{{player.name}} ended with</p>
+{% for chip in chips %}
+<input type="number" min="0" step="1" id="{{player.name}}-{{chip.color}}" name="{{player.name}}-{{chip.color}}">
+<label for="{{player.name}}-{{chip.color}}">{{chip.color}} Chips (${{"{:.2f}".format(chip.value)}})</label>
+<br>
+{% endfor %}
+{% endfor %}
+<input type="submit" value="Finish Game">
+</form>
+
+
+
+{{error}}
+
+</div>

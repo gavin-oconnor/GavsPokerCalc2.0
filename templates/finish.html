@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='finish.css') }}">
+</head>
+
+<div class="home-header">
+    <h1 class="home-title">Gav's Poker Payout Calculator 2.0</h1>
+    <p>You've already lost your college tuition, at least let us do the math for you</p>
+</div>
+<div class="body">
+<p class="question">Pay up.</p>
+
+{% for owe_string in owe_strings %}
+
+{% for string in owe_string %}
+
+<p>{{string}}</p> 
+
+{% endfor %}
+
+{% endfor %}
+
+<p>Looks like {{big_loser}} won't be going to college #Down{{down_amount}}</p>
+</div>
