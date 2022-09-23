@@ -1,4 +1,0 @@
-home --> newgame --> creatediffvalues --> diffvalues -->
-
-home --> newgame --> equalchips --> usechips --> play
-home --> newgame --> equalchips --> usecash --> play
