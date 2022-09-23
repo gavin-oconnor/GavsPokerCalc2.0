@@ -13,3 +13,13 @@ h1 {
     font-size: 45px;
     margin: auto;
 }
+
+.footer {
+    position: fixed;  
+    left: 10px;  
+    bottom: 5px;  
+    right: 10px;   
+    width: 95%;  
+    text-align: center;
+    color:rgb(147, 147, 147)
+}

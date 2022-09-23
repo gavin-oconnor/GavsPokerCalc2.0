@@ -44,3 +44,13 @@ input[type = "submit"]:hover {
 input[type = "number"] {
     margin-top: 10px;
 }
+
+.footer {
+    position: fixed;  
+    left: 10px;  
+    bottom: 5px;  
+    right: 10px;   
+    width: 95%;  
+    text-align: center;
+    color:rgb(147, 147, 147)
+}
